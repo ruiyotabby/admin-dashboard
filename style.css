@@ -7,12 +7,20 @@ body{
 
 .container{
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4.5fr;
   grid-template-rows: 227px 1fr;
 }
 
 li{
   list-style-type: none;
+}
+
+.header{
+  height: 10.8rem;
+  padding: 15px 20px;
+  padding-left: 30px;
+  /* margin: 15px 20px; */
+  box-shadow: 0px 0px 10px gray;
 }
 
 svg{
@@ -42,13 +50,6 @@ svg{
   margin-right: 50px;
 }
 
-.header{
-  height: 10.8rem;
-  padding: 15px 20px;
-  /* margin: 15px 20px; */
-  box-shadow: 0px 0px 10px gray;
-}
-
 .profile img{
   width: 5.3rem;
  height: 5.5rem; 
@@ -67,6 +68,7 @@ img{
   justify-content: space-between;
   margin-top: 20px;
   align-items: center;
+  padding-left: 30px;
 }
 
 .profile{
@@ -123,4 +125,66 @@ button{
 
 .main-content{
   background-color: #e2e8f0;
+  display: flex;
+  flex: 1;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.projects{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(19rem, 31.5vw));
+  grid-auto-rows: 300px;
+}
+
+.announcements > div, .projects > div, .trending > div{
+  background-color: white;
+  padding: 20px 30px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgb(173, 172, 172);
+}
+
+.projects > div{
+  border-left: 10px solid #f0b429;
+  position: relative;
+}
+
+.projects p, .announcements p{
+  color: #636363;
+}
+
+.svg{
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.announcements, .trending{
+  width: 20vw;
+  padding-right: 20px;
+}
+
+.users{
+  display: flex;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.users div{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.users span:last-of-type{
+  color: #636363;
+}
+
+.trending > div > div{
+  gap: 30px;
 }
